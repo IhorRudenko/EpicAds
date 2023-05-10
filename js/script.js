@@ -103,7 +103,6 @@ if (menuLinksBottom.length > 0) {
          menuBodyBottom.classList.remove('_active');
          menuBurgerBottom.classList.toggle('_active');
       }
-
    }
 }
 // -- /Меню бургер-2 ----------------------------------------------
@@ -171,73 +170,6 @@ function onItemClick() {
       langBox.classList.toggle('lang-open');
    }
 }
-// -- /languages ----------------------------------------------
-
-// // -- languages-bottom ----------------------------------------------
-// const langBoxBottom = document.querySelector('.leng__box--bottom');
-// const langItemBottom = document.querySelectorAll('.leng__item--bottom');
-
-// if (langBoxBottom) {
-//    langBoxBottom.addEventListener('click', function() { 
-//       this.classList.toggle('lang-open--bottom')
-//    })
-// }
-
-// if (langItemBottom.length > 0) {
-//    langItemBottom.forEach(item => {
-//       item.addEventListener("click", onItemClick());
-//    });
-// }
-
-// document.addEventListener('click', e => {
-//    let target = e.target;
-//    let its_menu = target == langBoxBottom || langBoxBottom.contains(target);
-//    let its_hamburger = target == langItemBottom;
-//    let menu_is_active = langBoxBottom.classList.contains('lang-open--bottom');
-   
-//    if (!its_menu && !its_hamburger && menu_is_active) {
-//       onItemBottomClick();
-//    }
-// })
-
-// function onItemBottomClick() {
-//    if (langBoxBottom.classList.contains('lang-open--bottom')) {
-//       langBoxBottom.classList.toggle('lang-open--bottom');
-//    }
-// }
-// // -- /languages-bottom ----------------------------------------------
-
-
-// // -- tabs ----------------------------------------------
-// const tabsBtn   = document.querySelectorAll(".tabs__nav-btn");
-// const tabsItems = document.querySelectorAll(".tabs__item");
-
-// tabsBtn.forEach(onTabClick);
-
-// function onTabClick(item) {
-//     item.addEventListener("click", function() {
-//         let currentBtn = item;
-//         let tabId = currentBtn.getAttribute("data-tab");
-//         let currentTab = document.querySelector(tabId);
-
-//         if( ! currentBtn.classList.contains('active') ) {
-//             tabsBtn.forEach(function(item) {
-//                 item.classList.remove('active');
-//             });
-    
-//             tabsItems.forEach(function(item) {
-//                 item.classList.remove('active');
-//             });
-    
-//             currentBtn.classList.add('active');
-//             currentTab.classList.add('active');
-//         }
-//     });
-// }
-
-// document.querySelector('.tabs__nav-btn').click();
-// // -- /tabs ----------------------------------------------
-
 
 // -- Hide header on scroll ----------------------------------------------
 const element = document.querySelector('.header');
