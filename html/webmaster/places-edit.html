@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+   <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+   
+   <link rel="stylesheet" href="../../css/style.css">
+   <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+
+   <title>Редактировать площадку</title>
+</head>
+
+<body class="font-main bg-gray light relative">
+   <div class="wrapper mx-auto py-3 h-screen flex flex-col justify-between text-base overflow-x-clip relative">
+     
+      <header class="header mb-4">
+         <div class="page-container--big">
+            <div class="header__inner header__container flex items-center bg-light px-[15px] py-[12px] rounded-[12px]">
+              
+               <a href="../../index.html" class="logo mr-0 lg:mr-6 flex flex-shrink-0 order-2 lg:order-1">
+                  <div class="logo-icon mr-4 w-8 h-8 smd:w-9"></div>
+                  <div class="logo-text w-[144px] hidden md:block"></div>
+               </a>
+
+               <div class="header-burger bg-gray px-[6px] py-[9px] rounded-[6px] w-8 h-8 cursor-pointer order-1 lg:order-2 mr-3 lg:mr-0 z-[99]">
+                  <div class="aside-menu__icon relative w-5 h-[14px] after:bg-accent smd:after:bg-white  pointer-events-none">
+                     <span></span>
+                  </div>
+               </div>
+
+               <div class="toggle-theme-box header-light justify-between items-center mx-3 w-16 h-8 rounded-[68px] bg-white p-[2px] order-3 hidden mmd:flex">
+                  <button class="light__day light__btn w-7 h-7 flex items-center justify-center rounded-[50%]">
+                     <svg class="fill-white" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.2789 17.4774V18.0617C12.2789 18.5267 11.9373 18.9136 11.4929 18.9794L11.3488 19.5103C11.2707 19.7984 11.0114 20 10.711 20H9.283C8.98259 20 8.72333 19.7984 8.64514 19.5103L8.50522 18.9794C8.05666 18.9095 7.7151 18.5267 7.7151 18.0576V17.4733C7.7151 17.1605 7.96613 16.9095 8.27889 16.9095H11.7151C12.0279 16.9136 12.2789 17.1646 12.2789 17.4774ZM14.925 9.60082C14.925 10.93 14.3982 12.1358 13.5423 13.0206C12.8921 13.6955 12.4723 14.5556 12.3324 15.4733C12.2707 15.8683 11.9291 16.1605 11.5258 16.1605H8.46819C8.06901 16.1605 7.72333 15.8724 7.66572 15.4774C7.52169 14.5597 7.09782 13.6872 6.44761 13.0165C5.60811 12.144 5.08547 10.9588 5.07313 9.65432C5.04432 6.91358 7.22539 4.69547 9.96613 4.6749C12.7028 4.65432 14.925 6.86831 14.925 9.60082ZM10.5546 6.61728C10.5546 6.31276 10.3077 6.06173 9.99905 6.06173C8.0402 6.06173 6.4435 7.65432 6.4435 9.61728C6.4435 9.92181 6.69041 10.1728 6.99905 10.1728C7.30358 10.1728 7.55461 9.92593 7.55461 9.61728C7.55461 8.26749 8.65337 7.17284 9.99905 7.17284C10.3077 7.17284 10.5546 6.92593 10.5546 6.61728ZM9.99905 3.05761C10.3036 3.05761 10.5546 2.8107 10.5546 2.50206V0.555556C10.5546 0.251029 10.3077 0 9.99905 0C9.69041 0 9.4435 0.246914 9.4435 0.555556V2.50206C9.4435 2.8107 9.69452 3.05761 9.99905 3.05761ZM3.45996 9.59671C3.45996 9.29218 3.21304 9.04115 2.9044 9.04115H0.957899C0.653373 9.04115 0.402344 9.28807 0.402344 9.59671C0.402344 9.90123 0.649257 10.1523 0.957899 10.1523H2.9044C3.21304 10.1523 3.45996 9.90535 3.45996 9.59671ZM19.0402 9.04115H17.0937C16.7892 9.04115 16.5381 9.28807 16.5381 9.59671C16.5381 9.90123 16.7851 10.1523 17.0937 10.1523H19.0402C19.3447 10.1523 19.5958 9.90535 19.5958 9.59671C19.5958 9.29218 19.3488 9.04115 19.0402 9.04115ZM4.59164 14.2222L3.21304 15.6008C2.99494 15.8189 2.99494 16.1687 3.21304 16.3868C3.32004 16.4938 3.46407 16.5473 3.60399 16.5473C3.74391 16.5473 3.88794 16.4938 3.99494 16.3868L5.37354 15.0082C5.59164 14.7901 5.59164 14.4403 5.37354 14.2222C5.15955 14.0041 4.80564 14.0041 4.59164 14.2222ZM15.0155 5.1358C15.1554 5.1358 15.2995 5.0823 15.4065 4.97531L16.7851 3.59671C17.0032 3.3786 17.0032 3.02881 16.7851 2.8107C16.567 2.59259 16.2172 2.59259 15.9991 2.8107L14.6205 4.1893C14.4023 4.40741 14.4023 4.7572 14.6205 4.97531C14.7316 5.0823 14.8715 5.1358 15.0155 5.1358ZM4.59164 4.97119C4.69864 5.07819 4.84267 5.13169 4.98259 5.13169C5.12251 5.13169 5.26654 5.07819 5.37354 4.97119C5.59164 4.75309 5.59164 4.40329 5.37354 4.18519L3.99494 2.80658C3.77683 2.58848 3.42704 2.58848 3.20893 2.80658C2.99082 3.02469 2.99082 3.37449 3.20893 3.59259L4.59164 4.97119ZM15.4065 14.2222C15.1884 14.0041 14.8386 14.0041 14.6205 14.2222C14.4023 14.4403 14.4023 14.7901 14.6205 15.0082L15.9991 16.3868C16.106 16.4938 16.2501 16.5473 16.39 16.5473C16.5299 16.5473 16.674 16.4938 16.7809 16.3868C16.9991 16.1687 16.9991 15.8189 16.7809 15.6008L15.4065 14.2222Z"/>
+                     </svg>
+                  </button>
+                  <button class="light__night light__btn w-7 h-7 flex items-center justify-center rounded-[50%]">
+                     <svg class="fill-gray" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.3997 9.08196C15.2406 9.04218 15.0814 9.08196 14.9422 9.18142C14.425 9.61903 13.8283 9.97707 13.1719 10.2158C12.5552 10.4545 11.8789 10.5738 11.1629 10.5738C9.55166 10.5738 8.07971 9.9174 7.02547 8.86316C5.97123 7.80892 5.31482 6.33697 5.31482 4.72577C5.31482 4.04947 5.43417 3.39306 5.63308 2.79632C5.85189 2.1598 6.17015 1.58295 6.58786 1.08567C6.76689 0.866866 6.7271 0.548605 6.5083 0.369584C6.36906 0.270128 6.20993 0.230345 6.0508 0.270128C4.36004 0.727627 2.88809 1.74208 1.83385 3.09469C0.819395 4.4274 0.222656 6.07838 0.222656 7.8686C0.222656 10.0367 1.09787 12.006 2.53004 13.4382C3.96222 14.8703 5.91156 15.7455 8.0996 15.7455C9.9296 15.7455 11.6204 15.109 12.973 14.0548C14.3455 12.9807 15.34 11.449 15.7577 9.69859C15.8373 9.42011 15.6782 9.14164 15.3997 9.08196Z"/>
+                     </svg>
+                  </button>
+               </div>
+
+               <div class="header__controls ml-auto items-center flex relative z-0 gap-3 mmd:gap-6 order-4">
+
+                  <a href="../advertiser/finance.html" class="money-box flex items-center font-accent font-bold text-[14px] smd:text-[18px]">
+                     <img class="wallet mr-3 w-[25px] smd:w-full" src="../../images/icons/wallet.svg" alt="img">
+                     <span class="currency mr-1">$</span>
+                     <span class="money">314.45</span>
+                  </a>
+               
+                  <div class="leng__box items-center cursor-pointer relative hidden smd:flex">
+                     <span class="page-lang__title lang__title mr-[6px] font-accent font-bold">RU</span>
+                     <img class="lang__icon w-[15px]" src="../../images/icons/arrow-down--big.svg" alt="icon">
+
+                     <div class="lang__body absolute top-[48px] right-0 flex-col gap-2 bg-white p-5 opacity-0 -translate-y-1/2 rounded-[12px] shadow-[0px 4px 20px rgba(0, 0, 0, 0.08)] hidden">
+                        <a href="#" class="lang__item text-dark hover:text-accent">EN</a>
+                        <a href="#" class="lang__item text-dark hover:text-accent">UA</a>
+                        <a href="#" class="lang__item text-dark hover:text-accent">DE</a>
+                     </div>
+                  </div>
+
+                  <a href="#" class="notification hidden smd:flex relative before:content-[''] before:absolute before:top-0 before:right-0 before:w-2 before:h-2 before:rounded-[50%] before:bg-accent before:border-[1px]">
+                     <!-- <img src="../../images/icons/bell.svg" alt="img"> -->
+                     <svg class="bell" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.379 16.913C17.867 15.635 17 13.767 17 11.788V9C17 5.481 14.386 2.568 11 2.08V1C11 0.447 10.552 0 10 0C9.448 0 9 0.447 9 1V2.08C5.613 2.568 3 5.481 3 9V11.788C3 13.767 2.133 15.635 0.612 16.921C0.223 17.254 0 17.738 0 18.25C0 19.215 0.785 20 1.75 20H18.25C19.215 20 20 19.215 20 18.25C20 17.738 19.777 17.254 19.379 16.913Z" fill=""/>
+                        <path d="M10.0002 24C11.8112 24 13.3262 22.709 13.6742 21H6.32617C6.67417 22.709 8.18917 24 10.0002 24Z" fill=""/>
+                     </svg>
+                  </a>
+
+                  <div class="user__box flex items-center relative cursor-pointer">
+                     <span class="user__name mr-3 font-accent font-bold text-[18px] text-dark hidden smd:block">Epik</span>
+                     <img class="user__icon w-8 h-8 mr-2" src="../../images/icons/user.svg" alt="icon">
+                     <img class="user__icon w-[15px]" src="../../images/icons/arrow-down--big.svg" alt="icon">
+
+                     <div class="user-body absolute top-[52px] right-[-5px] mmd:right-0 bg-[#fff] p-6 rounded-[12px] shadow-[box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);] flex-col hidden">
+                        <div class="user-header">
+                           <h3 class="user-header__name font-accent font-bold text-dark text-[20px] leading-[115%]">Epik Mike</h3>  
+                           <p class="user-header__role font-accent text-[#BDBDBD] text-[14px] mb-6">Вебмастер</p>
+                        </div>
+
+                        <ul class="ul">
+                           <li>
+                              <a class="user-menu__item flex items-center mb-3 hover:text-accent" href="../webmaster/statistycs-web-profile.html">
+                                 <img src="../../images/icons/user-profile.svg" alt="img">
+                                 <span class="font-accent font-bold text-[14px] leading-[110%] ml-[12px]">Профиль</span>
+                              </a>
+                           </li>
+                           
+                           <li>
+                              <a class="user-menu__item flex items-center mb-3 hover:text-accent" href="../advertiser/statistycs-referals.html">
+                                 <img src="../../images/icons/referal.svg" alt="img">
+                                 <span class="font-accent font-bold text-[14px] leading-[110%] ml-[12px]">Рефералы</span>
+                              </a>
+                           </li>
+                           
+                           <li>
+                              <a class="user-menu__item flex items-center mb-3 hover:text-accent" href="../webmaster/statistycs-api.html">
+                                 <img src="../../images/icons/api.svg" alt="img">
+                                 <span class="font-accent font-bold text-[14px] leading-[110%] ml-[12px]">API</span>
+                              </a>
+                           </li>
+                           
+                           <li>
+                              <a class="user-menu__item flex items-center pt-3 hover:text-accent" href="#">
+                                 <img src="../../images/icons/exit.svg" alt="img">
+                                 <span class="font-accent font-bold text-[14px] leading-[110%] ml-[12px]">Выход</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <main class="flex-[1_1_auto]">
+         <div class="page-container--big h-full">
+            <div class="inner h-full flex">
+               <aside class="aside navigation relative w-[206px] min-w-[206px] smd:w-[225px] smd:min-w-[225px] bg-gray h-full flex flex-col">
+                  
+                  <div class="leng absolute top-7 left-[135px]">
+                     <div class="aside-leng__box items-center cursor-pointer relative smd:hidden flex">
+                        <span class="mr-[6px] font-accent font-bold text-white">RU</span>
+                        <img class="lang__icon w-[15px]" src="../../images/icons/arrow-down--big.svg" alt="icon">
+   
+                        <div class="lang__body absolute top-[30px] right-0 flex-col gap-2 bg-[#fff] p-5 opacity-0 -translate-y-1/2 rounded-[12px] shadow-[0px 4px 20px rgba(0, 0, 0, 0.08)] hidden z-20">
+                           <a href="#" class="aside-leng__item text-dark hover:text-accent">EN</a>
+                           <a href="#" class="aside-leng__item text-dark hover:text-accent">UA</a>
+                           <a href="#" class="aside-leng__item text-dark hover:text-accent">DE</a>
+                        </div>
+                     </div>
+                  </div>
+
+                  <a href="#" class="notification smd:hidden flex absolute top-7 left-[100px] before:content-[''] before:absolute before:top-0 before:right-0 before:w-2 before:h-2 before:rounded-[50%] before:bg-accent before:border-[1px] before:border-gray">
+                     
+                     <svg class="aside__bell w-5 h-5 fill-white" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.379 16.913C17.867 15.635 17 13.767 17 11.788V9C17 5.481 14.386 2.568 11 2.08V1C11 0.447 10.552 0 10 0C9.448 0 9 0.447 9 1V2.08C5.613 2.568 3 5.481 3 9V11.788C3 13.767 2.133 15.635 0.612 16.921C0.223 17.254 0 17.738 0 18.25C0 19.215 0.785 20 1.75 20H18.25C19.215 20 20 19.215 20 18.25C20 17.738 19.777 17.254 19.379 16.913Z" fill=""/>
+                        <path d="M10.0002 24C11.8112 24 13.3262 22.709 13.6742 21H6.32617C6.67417 22.709 8.18917 24 10.0002 24Z" fill=""/>
+                     </svg>
+                        
+                  </a>
+
+                  <div class="toggle-theme-box header-light justify-between items-center mx-3 w-16 h-8 rounded-[68px] bg-white p-[2px] order-3 mmd:hidden flex ml-auto mb-6 border border-[#292F3D]">
+                     <button class="light__day light__btn w-7 h-7 flex items-center justify-center rounded-[50%]">
+                        <svg class="fill-white" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M12.2789 17.4774V18.0617C12.2789 18.5267 11.9373 18.9136 11.4929 18.9794L11.3488 19.5103C11.2707 19.7984 11.0114 20 10.711 20H9.283C8.98259 20 8.72333 19.7984 8.64514 19.5103L8.50522 18.9794C8.05666 18.9095 7.7151 18.5267 7.7151 18.0576V17.4733C7.7151 17.1605 7.96613 16.9095 8.27889 16.9095H11.7151C12.0279 16.9136 12.2789 17.1646 12.2789 17.4774ZM14.925 9.60082C14.925 10.93 14.3982 12.1358 13.5423 13.0206C12.8921 13.6955 12.4723 14.5556 12.3324 15.4733C12.2707 15.8683 11.9291 16.1605 11.5258 16.1605H8.46819C8.06901 16.1605 7.72333 15.8724 7.66572 15.4774C7.52169 14.5597 7.09782 13.6872 6.44761 13.0165C5.60811 12.144 5.08547 10.9588 5.07313 9.65432C5.04432 6.91358 7.22539 4.69547 9.96613 4.6749C12.7028 4.65432 14.925 6.86831 14.925 9.60082ZM10.5546 6.61728C10.5546 6.31276 10.3077 6.06173 9.99905 6.06173C8.0402 6.06173 6.4435 7.65432 6.4435 9.61728C6.4435 9.92181 6.69041 10.1728 6.99905 10.1728C7.30358 10.1728 7.55461 9.92593 7.55461 9.61728C7.55461 8.26749 8.65337 7.17284 9.99905 7.17284C10.3077 7.17284 10.5546 6.92593 10.5546 6.61728ZM9.99905 3.05761C10.3036 3.05761 10.5546 2.8107 10.5546 2.50206V0.555556C10.5546 0.251029 10.3077 0 9.99905 0C9.69041 0 9.4435 0.246914 9.4435 0.555556V2.50206C9.4435 2.8107 9.69452 3.05761 9.99905 3.05761ZM3.45996 9.59671C3.45996 9.29218 3.21304 9.04115 2.9044 9.04115H0.957899C0.653373 9.04115 0.402344 9.28807 0.402344 9.59671C0.402344 9.90123 0.649257 10.1523 0.957899 10.1523H2.9044C3.21304 10.1523 3.45996 9.90535 3.45996 9.59671ZM19.0402 9.04115H17.0937C16.7892 9.04115 16.5381 9.28807 16.5381 9.59671C16.5381 9.90123 16.7851 10.1523 17.0937 10.1523H19.0402C19.3447 10.1523 19.5958 9.90535 19.5958 9.59671C19.5958 9.29218 19.3488 9.04115 19.0402 9.04115ZM4.59164 14.2222L3.21304 15.6008C2.99494 15.8189 2.99494 16.1687 3.21304 16.3868C3.32004 16.4938 3.46407 16.5473 3.60399 16.5473C3.74391 16.5473 3.88794 16.4938 3.99494 16.3868L5.37354 15.0082C5.59164 14.7901 5.59164 14.4403 5.37354 14.2222C5.15955 14.0041 4.80564 14.0041 4.59164 14.2222ZM15.0155 5.1358C15.1554 5.1358 15.2995 5.0823 15.4065 4.97531L16.7851 3.59671C17.0032 3.3786 17.0032 3.02881 16.7851 2.8107C16.567 2.59259 16.2172 2.59259 15.9991 2.8107L14.6205 4.1893C14.4023 4.40741 14.4023 4.7572 14.6205 4.97531C14.7316 5.0823 14.8715 5.1358 15.0155 5.1358ZM4.59164 4.97119C4.69864 5.07819 4.84267 5.13169 4.98259 5.13169C5.12251 5.13169 5.26654 5.07819 5.37354 4.97119C5.59164 4.75309 5.59164 4.40329 5.37354 4.18519L3.99494 2.80658C3.77683 2.58848 3.42704 2.58848 3.20893 2.80658C2.99082 3.02469 2.99082 3.37449 3.20893 3.59259L4.59164 4.97119ZM15.4065 14.2222C15.1884 14.0041 14.8386 14.0041 14.6205 14.2222C14.4023 14.4403 14.4023 14.7901 14.6205 15.0082L15.9991 16.3868C16.106 16.4938 16.2501 16.5473 16.39 16.5473C16.5299 16.5473 16.674 16.4938 16.7809 16.3868C16.9991 16.1687 16.9991 15.8189 16.7809 15.6008L15.4065 14.2222Z"/>
+                        </svg>
+                     </button>
+                     <button class="light__night light__btn w-7 h-7 flex items-center justify-center rounded-[50%]">
+                        <svg class="fill-gray" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M15.3997 9.08196C15.2406 9.04218 15.0814 9.08196 14.9422 9.18142C14.425 9.61903 13.8283 9.97707 13.1719 10.2158C12.5552 10.4545 11.8789 10.5738 11.1629 10.5738C9.55166 10.5738 8.07971 9.9174 7.02547 8.86316C5.97123 7.80892 5.31482 6.33697 5.31482 4.72577C5.31482 4.04947 5.43417 3.39306 5.63308 2.79632C5.85189 2.1598 6.17015 1.58295 6.58786 1.08567C6.76689 0.866866 6.7271 0.548605 6.5083 0.369584C6.36906 0.270128 6.20993 0.230345 6.0508 0.270128C4.36004 0.727627 2.88809 1.74208 1.83385 3.09469C0.819395 4.4274 0.222656 6.07838 0.222656 7.8686C0.222656 10.0367 1.09787 12.006 2.53004 13.4382C3.96222 14.8703 5.91156 15.7455 8.0996 15.7455C9.9296 15.7455 11.6204 15.109 12.973 14.0548C14.3455 12.9807 15.34 11.449 15.7577 9.69859C15.8373 9.42011 15.6782 9.14164 15.3997 9.08196Z"/>
+                        </svg>
+                     </button>
+                  </div>
+
+                  <select class="form__select z-10 order-1 bg-extra-dark font-accent font-bold text-white leading-[110%]" name="#">
+							<option value="1" selected class="font-accent font-normal text-accent bg-dark">Вебмастер</option>
+                     <option value="2" class="font-accent font-normal">Рекламодатель</option>
+						</select>
+
+                  <ul class="nav w-full relative order-2 z-0 mb-5 flex-auto">
+                     <li class="aside-item relative w-[158px] smd:w-full active">
+                        <a class="relative rounded-[8px] smd:rounded-[12px] flex items-center w-full text-white p-[6px] smd:px-4 smd:py-3" href="#">
+                           <img class="icon block w-5 h-5 smd:w-6 smd:h-6 relative z-10 mr-3 min-w-[20px] smd:min-w-[24px]" src="../../images/icons/icon-company.svg" alt="img">
+                           <span class="text font-accent whitespace-nowrap text-white text-[14px] smd:text-[16px]">Площадки</span>
+                           <div class="aside-item__btn open-popup-1 w-6 h-6 rounded-[50%] bg-accent flex items-center justify-center ml-auto hover:bg-hover z-10">
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M6 11.0302C5.62238 11.0302 5.31641 10.7242 5.31641 10.3466V1.65234C5.31641 1.27473 5.62238 0.96875 6 0.96875C6.37762 0.96875 6.68359 1.27473 6.68359 1.65234V10.3466C6.68359 10.7242 6.37762 11.0302 6 11.0302Z" fill="white"/>
+                                 <path d="M10.3466 6.68262H1.65234C1.27473 6.68262 0.96875 6.37664 0.96875 5.99902C0.96875 5.62141 1.27473 5.31543 1.65234 5.31543H10.3466C10.7242 5.31543 11.0302 5.62141 11.0302 5.99902C11.0302 6.37664 10.7242 6.68262 10.3466 6.68262Z" fill="white"/>
+                              </svg>
+                           </div>
+                        </a>
+                     </li>
+                     <li class="aside-item relative w-[158px] smd:w-full">
+                        <a class="relative rounded-[8px] smd:rounded-[12px] flex items-center w-full text-white p-[6px] smd:px-4 smd:py-3" href="../webmaster/statistycs-web.html">
+                           <img class="icon block w-5 h-5 smd:w-6 smd:h-6 relative z-10 mr-3 min-w-[20px] smd:min-w-[24px]" src="../../images/icons/icon-statistics.svg" alt="img">
+                           <span class="text font-accent whitespace-nowrap text-white text-[14px] smd:text-[16px]">Статистика</span>
+                        </a>
+                     </li>
+                     <li class="aside-item relative w-[158px] smd:w-full">
+                        <a class="relative rounded-[8px] smd:rounded-[12px] flex items-center w-full text-white p-[6px] smd:px-4 smd:py-3" href="../webmaster/payment.html">
+                           <img class="icon block w-5 h-5 smd:w-6 smd:h-6 relative z-10 mr-3 min-w-[20px] smd:min-w-[24px]" src="../../images/icons/icon-money.svg" alt="img">
+                           <span class="text font-accent whitespace-nowrap text-white text-[14px] smd:text-[16px]">Выплаты</span>
+                        </a>
+                     </li>
+                     <li class="aside-item relative w-[158px] smd:w-full">
+                        <a class="relative rounded-[8px] smd:rounded-[12px] flex items-center w-full text-white p-[6px] smd:px-4 smd:py-3" href="#">
+                           <img class="icon block w-5 h-5 smd:w-6 smd:h-6 relative z-10 mr-3 min-w-[20px] smd:min-w-[24px]" src="../../images/icons/icon-country.svg" alt="img">
+                           <span class="text font-accent whitespace-nowrap text-white text-[14px] smd:text-[16px]">ТОП стран</span>
+                        </a>
+                     </li>
+                     <li class="aside-item relative w-[158px] smd:w-full">
+                        <a class="relative rounded-[8px] smd:rounded-[12px] flex items-center w-full text-white p-[6px] smd:px-4 smd:py-3" href="#">
+                           <img class="icon block w-5 h-5 smd:w-6 smd:h-6 relative z-10 mr-3 min-w-[20px] smd:min-w-[24px]" src="../../images/icons/icon-price.svg" alt="img">
+                           <span class="text font-accent whitespace-nowrap text-white text-[14px] smd:text-[16px]">Цены СРА</span>
+                        </a>
+                     </li>
+                     <li class="aside-item relative w-[158px] smd:w-full">
+                        <a class="relative rounded-[8px] smd:rounded-[12px] flex items-center w-full text-white p-[6px] smd:px-4 smd:py-3" href="#">
+                           <img class="icon block w-5 h-5 smd:w-6 smd:h-6 relative z-10 mr-3 min-w-[20px] smd:min-w-[24px]" src="../../images/icons/icon-faq.svg" alt="img">
+                           <span class="text font-accent whitespace-nowrap text-white text-[14px] smd:text-[16px]">FAQ</span>
+                        </a>
+                     </li>
+                  </ul>
+
+                  <footer class="aside-footer w-[158px] smd:w-[209px] flex flex-col gap-4 smd:gap-6 justify-end order-3 text-white leading-[110%] mr-0 mb-6 smd:mr-4 smd:mb-10 lg:mb-4 transition-opacity duration-200">
+                     <div class="aside-footer__manager bg-extra-dark rounded-[8px] smd:rounded-[12px] px-[10px] py-[10px] smd:px-4 smd:py-3">
+                        <h4 class="aside-footer__label font-accent text-[10px] smd:text-[12px] mb-0 smd:mb-2">Ваш менеджер</h4>
+                        <div class="flex items-center gap-4 smd:gap-7 justify-between">
+                           <h3 class="aside-footer__manager-name font-accent font-bold text-[17px] smd:text-[20px]">Epik Mike</h3>
+                           <div class="aside-footer__social flex items-center gap-[4px] smd:gap-2">
+                              <a href="#" class="contacts__mail flex items-center relative before:absolute  before:w-5 before:h-5 smd:before:w-6 smd:before:h-6 rounded-[6px] bg-white">
+                                 <img class="w-5 h-5 smd:w-6 smd:h-6" src="../../images/icons/telegram.svg" alt="img">
+                              </a>
+                              <a href="#" class="contacts__mail flex items-center relative before:absolute before:w-5 before:h-5 smd:before:w-6 smd:before:h-6 rounded-[6px] bg-white">
+                                 <img class="w-5 h-5 smd:w-6 smd:h-6" src="../../images/icons/skype.svg" alt="img">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <ul class="aside-footer__link gap-3 leading-[110%] flex flex-col ml-4">
+                        <li><a class="font-accent text-[12px] smd:text-[14px] hover:text-accent" href="#">Terms & Conditions</a></li>
+                        <li><a class="font-accent text-[12px] smd:text-[14px] hover:text-accent" href="#">Privacy Policy</a></li>
+                        <li><a class="font-accent text-[12px] smd:text-[14px] hover:text-accent" href="#">Cookies Policy</a></li>
+                     </ul>
+
+                     <p class="font-accent text-[12px] smd:text-[14px] ml-4">Copyright © Epicads 2023</p>
+                  </footer>
+               </aside>
+
+               <div class="places-content content bg-light w-full -ml-[1px] rounded-[12px] p-3 smd:p-4 md:p-6">
+                  <div class="content__header flex items-center justify-between mb-6">
+                     <div class="content__title-box flex items-center mr-5">
+                        <h1 class="content__title font-accent font-bold text-dark leading-[110%] mr-4 md:text-[40px] text-[32px]">Редактировать площадку ID: <span>217</span></h1>
+                     </div>
+                  </div>
+
+                 <div class="places-edit__body lxl:grid grid-cols-2 grid-rows-1 gap-6 flex flex-col">
+
+                    <div class="places-edit__lines-box">
+                        <div class="places-edit__lines flex flex-col gap-4 bg-white rounded-[8px] px-3 py-4 md:p-4 lg:p-6 w-full">
+
+                           <div class="places-edit__lines-item w-full">
+                              <div class="flex items-center gap-3">
+                                 <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Название</label>
+                              </div>
+                              <input class="places-edit__input pay__input order-1 bg-white p-3 rounded-[8px] w-full text-[12px] smd:text-[16px] placeholder:text-[12px] smd:placeholder:text-[16px] placeholder:text-[#BDBDBD] leading-[110%] h-[42px] block border border-[#BDBDBD]" type="text" placeholder="Введите название">
+                           </div>
+
+                           <div class="places-edit__lines-item w-full">
+                              <div class="flex items-center gap-3">
+                                 <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Ссылка Trafficback</label>
+                              </div>
+                              <input class="places-edit__input pay__input order-1 bg-white p-3 rounded-[8px] w-full text-[12px] smd:text-[16px] placeholder:text-[12px] smd:placeholder:text-[16px] placeholder:text-[#BDBDBD] leading-[110%] h-[42px] block border border-[#BDBDBD]" type="text" placeholder="Вставьте ссылку">
+                           </div>
+
+                           <div class="places-edit__lines-item w-full">
+                              <div class="flex items-center gap-3">
+                                 <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Ссылка Trafficback</label>
+                              </div>
+                              <input class="places-edit__input pay__input order-1 bg-white p-3 rounded-[8px] w-full text-[12px] smd:text-[16px] placeholder:text-[12px] smd:placeholder:text-[16px] placeholder:text-[#BDBDBD] leading-[110%] h-[42px] block border border-[#BDBDBD]" type="text" placeholder="Вставьте ссылку">
+                           </div>
+
+                           <div class="places-edit__lines-item w-full">
+                              <div class="flex items-center gap-3">
+                                 <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Ссылка Postback</label>
+                              </div>
+                              <input class="places-edit__input pay__input order-1 bg-white p-3 rounded-[8px] w-full text-[12px] smd:text-[16px] placeholder:text-[12px] smd:placeholder:text-[16px] placeholder:text-[#BDBDBD] leading-[110%] h-[42px] block border border-[#BDBDBD]" type="text" placeholder="Вставьте ссылку">
+                           </div>
+
+                           <div class="places-edit__link-box flex gap-[8px] flex-wrap">
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{click_id}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{source_id}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{zone_id}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{cost}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{country}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{campaign_id}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{campaign_id}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{creative_id}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{format}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{sub_period}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{browser_version}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{browser}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{city}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{connection_type}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{lang}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{os}</a>
+                              <a href="#" class="places-edit__link p-[6px] rounded-[6px] block border border-[#BDBDBD] bg-transparent leading-[110%] text-[10px] smd:text-[12px]">{os_version}</a>
+                           </div>
+
+                           <div class="places-edit__controls">
+
+                              <div class="places-edit__bottom flex flex-col md:flex-row items-start md:items-center gap-3 flex-wrap">
+                                 <div class="form__item min-w-[220px]">
+                                    <div class="checkbox">
+                                       <input id="places-check-1" type="checkbox" name="places-check-1" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                       <label for="places-check-1" class="checkbox__label"><span>Заблокировать Adult объявления</span></label>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="form__item min-w-[155px]">
+                                    <div class="checkbox">
+                                       <input id="places-check-2" type="checkbox" name="places-check-2" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                       <label for="places-check-2" class="checkbox__label"><span>Включить объявления</span></label>
+                                    </div>
+                                 </div>
+
+                                 <button class="filter-body__bottom-btn w-full smd:w-auto font-accent font-bold text-[14px] leading-[110%] text-white px-3 py-2 rounded-[8px] bg-accent hover:bg-hover ml-auto">Сохранить</button>
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+
+                  <div class="places-edit__block">
+                     <h2 class="places-edit__subtitle font-accent font-bold leading-[110%] text-[20px] mb-4 md:mb-6">Выбранные лендинги: <span class="font-accent text-accent text-[20px] leading-[110%] font-bold">6</span></h2>
+
+                     <div class="content-main__wrapper overflow-x-auto">
+                        <div class="places-edit__wrapper mb-3 w-fit md:w-auto">
+                           <div class="places-edit__content min-w-[635px]">
+                              <div class="places-edit__inner gap-3 md:gap-4 flex-wrap grid grid-cols-3 grid-rows-4">
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-1" type="checkbox" name="choose-1" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-1" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/1.jpg" alt="img">
+                                 </div>
+                              </div>
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-2" type="checkbox" name="choose-2" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-2" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/2.jpg" alt="img">
+                                 </div>
+                              </div>
+                              
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-3" type="checkbox" name="choose-3" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-3" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/3.jpg" alt="img">
+                                 </div>
+                              </div>
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-4" type="checkbox" name="choose-4" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-4" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/4.jpg" alt="img">
+                                 </div>
+                              </div>
+                              
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-5" type="checkbox" name="choose-5" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-5" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/5.jpg" alt="img">
+                                 </div>
+                              </div>
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-6" type="checkbox" name="choose-6" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-6" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/6.jpg" alt="img">
+                                 </div>
+                              </div>
+   
+   
+   
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-7" type="checkbox" name="choose-7" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-7" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/1.jpg" alt="img">
+                                 </div>
+                              </div>
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-8" type="checkbox" name="choose-8" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-8" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/2.jpg" alt="img">
+                                 </div>
+                              </div>
+                              
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-9" type="checkbox" name="choose-9" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-9" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/3.jpg" alt="img">
+                                 </div>
+                              </div>
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-10" type="checkbox" name="choose-10" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-10" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/4.jpg" alt="img">
+                                 </div>
+                              </div>
+                              
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-11" type="checkbox" name="choose-11" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-11" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/5.jpg" alt="img">
+                                 </div>
+                              </div>
+   
+                              <div class="places-edit__item p-3 bg-white rounded-[8px]">
+                                 <div class="places-edit__item-top flex items-center justify-between gap-1 mb-3">
+                                    <div class="form__item">
+                                       <div class="checkbox">
+                                          <input id="choose-12" type="checkbox" name="choose-12" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                                          <label for="choose-12" class="checkbox__label font-accent font-bold text-[14px]"><span class="font-accent text-[14px]">ID: 217</span></label>
+                                       </div>
+                                    </div>
+   
+                                    <span class="places-edit__verify font-accent text-[14px] leading-[110%]">Age verification</span>
+                                 </div>
+   
+                                 <div class="places-edit__img-box relative overflow-hidden pb-[58%] rounded-[4px]">
+                                    <img class="places-edit__img absolute w-full h-full top-0 left-0 object-cover" src="../../images/places-edit-page/6.jpg" alt="img">
+                                 </div>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            </div>
+         </div>
+      </main>
+     
+   </div>
+
+
+     <!-- popup-modal -->
+     <div class="popup__bg-1 popup__bg overflow-y-auto"> 
+
+      <div class="popup-1 popup active p-3 md:p-8">
+   
+         <div class="popup__title text-[18px] md:text-[32px] lg:text-[40px]">Новая площадка</div>
+   
+         <svg class="close-popup-1 close-popup">
+            <use xlink:href="#close"></use>
+         </svg>
+               
+         <div class="popup__body">
+            <form class="popup__form flex flex-col gap-4" action="#">
+
+               <div class="w-full">
+                  <div class="flex items-center justify-between gap-3">
+                     <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Название</label>
+                  </div>
+                  <input class="payment__input pay__input bg-[#F9F9F9] p-3 rounded-[8px] w-full text-[12px] smd:text-[16px] placeholder:text-[12px] smd:placeholder:text-[16px] placeholder:text-[#BDBDBD] leading-[110%] h-[42px] block border border-[#BDBDBD]" type="text" placeholder="Введите сумму">
+               </div>
+                        
+               <div class="content__select-wrapper w-full">
+                  <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Модель оплаты</label>
+                  <select class="form__select w-full" name="#">
+                     <option value="1" selected class="">Все форматы</option>
+                     <option value="2" class="">Активная</option>
+                     <option value="3" class="">Удалена</option>
+                     <option value="4" class="">Остановлена</option>
+                     <option value="5" class="">На проверке</option>
+                     <option value="6" class="">Отклонена</option>
+                  </select>
+               </div>
+
+               <div class="content__select-wrapper w-full">
+                  <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Тип источника</label>
+                  <select class="form__select w-full" name="#">
+                     <option value="1" selected class="">Ad_network</option>
+                     <option value="2" class="">Активная</option>
+                     <option value="3" class="">Удалена</option>
+                     <option value="4" class="">Остановлена</option>
+                     <option value="5" class="">На проверке</option>
+                     <option value="6" class="">Отклонена</option>
+                  </select>
+               </div>
+
+               <div class="w-full">
+                  <div class="flex items-center justify-between gap-3">
+                     <label class="statistycs__label font-accent text-[12px] smd:text-[14px] mb-2 smd:mb-3 block leading-[110%]">Ссылка на источник</label>
+                  </div>
+                  <input class="payment__input pay__input bg-[#F9F9F9] p-3 rounded-[8px] w-full text-[12px] smd:text-[16px] placeholder:text-[12px] smd:placeholder:text-[16px] placeholder:text-[#BDBDBD] leading-[110%] h-[42px] block border border-[#BDBDBD]" type="text" placeholder="Введите сумму">
+               </div>
+            
+               <div class="popup-bottom flex flex-col md:flex-row items-center justify-between gap-4 mt-2">
+                  <div class="form__item min-w-[190px]">
+                     <div class="checkbox">
+                        <input id="popup-check-1" type="checkbox" name="popup-check-1" class="checkbox__input checkbox__input--all" onclick="checkedAllOnClick(this)">
+                        <label for="popup-check-1" class="checkbox__label"><span>Это адалт кампания</span></label>
+                     </div>
+                  </div>
+
+                  <button class="popup-btn w-full md:w-fit text-center text-[14px] block bg-accent border border-accent px-4 py-3 rounded-[8px] leading-[110%] h-[42px] text-white hover:bg-hover whitespace-nowrap">Создать</button>
+               </div>
+
+            </form>
+
+         </div>
+       
+      </div>
+   </div> 
+   <!-- popup-modal -->
+
+
+   <!-- sprite-svg -->
+   <svg class="hidden" display="none">
+      <symbol id="btn-filter" viewBox="0 0 16 16">
+         <g clip-path="url(#clip0_503_21015)">
+            <path d="M15.5312 1.875H13.1401C12.9223 0.806531 11.9755 0 10.8438 0C9.712 0 8.76522 0.806531 8.54744 1.875H0.46875C0.209656 1.875 0 2.08466 0 2.34375C0 2.60284 0.209656 2.8125 0.46875 2.8125H8.54744C8.76522 3.88097 9.712 4.6875 10.8438 4.6875C11.9755 4.6875 12.9223 3.88097 13.1401 2.8125H15.5312C15.7903 2.8125 16 2.60284 16 2.34375C16 2.08466 15.7903 1.875 15.5312 1.875Z" fill=""/>
+            <path d="M15.5312 7.53125H7.48381C7.26603 6.46278 6.31925 5.65625 5.1875 5.65625C4.05575 5.65625 3.10897 6.46278 2.89119 7.53125H0.46875C0.209656 7.53125 0 7.74091 0 8C0 8.25909 0.209656 8.46875 0.46875 8.46875H2.89119C3.10897 9.53722 4.05575 10.3438 5.1875 10.3438C6.31925 10.3438 7.26603 9.53722 7.48381 8.46875H15.5312C15.7903 8.46875 16 8.25909 16 8C16 7.74091 15.7903 7.53125 15.5312 7.53125Z" fill=""/>
+            <path d="M15.5312 13.1875H13.1401C12.9223 12.119 11.9755 11.3125 10.8438 11.3125C9.712 11.3125 8.76522 12.119 8.54744 13.1875H0.46875C0.209656 13.1875 0 13.3972 0 13.6562C0 13.9153 0.209656 14.125 0.46875 14.125H8.54744C8.76522 15.1935 9.712 16 10.8438 16C11.9755 16 12.9223 15.1935 13.1401 14.125H15.5312C15.7903 14.125 16 13.9153 16 13.6562C16 13.3972 15.7903 13.1875 15.5312 13.1875Z" fill=""/>
+         </g>
+         <defs>
+            <clipPath id="clip0_503_21015">
+               <rect width="16" height="16" fill=""/>
+            </clipPath>
+         </defs>
+      </symbol>
+   </svg>
+   
+   <svg class="hidden" display="none">
+      <symbol id="mobile-filter" viewBox="0 0 16 15">
+         <path d="M14.0147 0.25H1.98282C1.67738 0.250241 1.37857 0.339134 1.12266 0.505891C0.866751 0.672649 0.664747 0.910101 0.541164 1.18943C0.417581 1.46876 0.377731 1.77795 0.426452 2.07949C0.475173 2.38102 0.61037 2.66193 0.815633 2.88812L6.03001 8.62281V14.0313C6.03005 14.137 6.05989 14.2405 6.1161 14.3301C6.17232 14.4196 6.25262 14.4915 6.34782 14.5375C6.4239 14.575 6.50768 14.5943 6.59251 14.5938C6.72035 14.5937 6.84435 14.55 6.94407 14.47L7.99876 13.6263L9.75657 12.22C9.82235 12.1673 9.87545 12.1006 9.91196 12.0246C9.94847 11.9487 9.96745 11.8655 9.96751 11.7813V8.62281L15.1819 2.88812C15.3871 2.66193 15.5223 2.38102 15.5711 2.07949C15.6198 1.77795 15.5799 1.46876 15.4564 1.18943C15.3328 0.910101 15.1308 0.672649 14.8749 0.505891C14.6189 0.339134 14.3201 0.250241 14.0147 0.25Z" fill=""/>
+      </symbol>
+   </svg>
+   
+   <svg class="hidden" display="none">
+      <symbol id="close" viewBox="0 0 12 12">
+         <path d="M7.09938 6.00973L11.7719 1.33703C12.076 1.03309 12.076 0.541661 11.7719 0.237721C11.468 -0.0662194 10.9766 -0.0662194 10.6726 0.237721L5.99993 4.91042L1.32737 0.237721C1.02329 -0.0662194 0.532002 -0.0662194 0.228062 0.237721C-0.0760206 0.541661 -0.0760206 1.03309 0.228062 1.33703L4.90062 6.00973L0.228062 10.6824C-0.0760206 10.9864 -0.0760206 11.4778 0.228062 11.7817C0.379534 11.9334 0.578696 12.0095 0.777716 12.0095C0.976736 12.0095 1.17576 11.9334 1.32737 11.7817L5.99993 7.10904L10.6726 11.7817C10.8243 11.9334 11.0233 12.0095 11.2223 12.0095C11.4213 12.0095 11.6203 11.9334 11.7719 11.7817C12.076 11.4778 12.076 10.9864 11.7719 10.6824L7.09938 6.00973Z" fill=""/>
+      </symbol>
+   </svg>
+ 
+
+   <!-- <svg class="">
+      <use xlink:href="#..."></use>
+   </svg> -->
+
+   <!-- sprite-svg -->
+
+  
+   <script src="../../js/select.js"></script>
+   <script src="../../js/app.js"></script>
+</body>
+</html>
