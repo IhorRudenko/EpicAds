@@ -224,7 +224,7 @@ const $tableLinks = document.querySelectorAll('.info__item'),
          let currentPath = self.querySelectorAll('path');
          if (currentPolygon) currentPolygon.forEach(el => el.style.cssText = `fill: ${color}; stroke-width: 0.2px;`);
          if (currentPath) currentPath.forEach(el => el.style.cssText = `fill: ${color}; stroke-width: 0.2px;`);
-         currentElement.classList.add('active-map');
+         // currentElement.classList.add('active-map');
       });
    
       el.addEventListener('mouseleave', (e) => {
@@ -235,7 +235,7 @@ const $tableLinks = document.querySelectorAll('.info__item'),
          let currentPath = self.querySelectorAll('path');
          if (currentPolygon) currentPolygon.forEach(el => el.style.cssText = ``);
          if (currentPath) currentPath.forEach(el => el.style.cssText = ``);
-         currentElement.classList.remove('active-map');
+         // currentElement.classList.remove('active-map');
       });
         
    });
