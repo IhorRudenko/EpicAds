@@ -5011,7 +5011,6 @@ body._lock::before {
   }
 
   .navigation ul li.active {
-    /* background-color: var(--white-light_extra-dark); */
     border-radius: 12px 0 0 12px;
   }
 
@@ -5024,7 +5023,6 @@ body._lock::before {
     height: 32px;
     border-radius: 50%;
     background: #353C4D;
-    /* box-shadow: 16px 16px 0 var(--white-light_extra-dark); */
     box-shadow: 16px 16px 0 var(--light_extra-dark);
   }
 
@@ -5037,7 +5035,6 @@ body._lock::before {
     height: 32px;
     border-radius: 50%;
     background: #353C4D;
-    /* box-shadow: 16px -16px 0 var(--white-light_extra-dark); */
     box-shadow: 16px -16px 0 var(--light_extra-dark);
   }
 
@@ -5052,12 +5049,10 @@ body._lock::before {
 }
 
 .navigation {
-  /* box-shadow: 24px 0 0 #EDEDED; */
   border-radius: 12px 0 0 12px;
 }
 
 .navigation ul li.active {
-  /* background-color: var(--white-light_extra-dark); */
   border-radius: 12px;
 }
 
@@ -5068,7 +5063,6 @@ body._lock::before {
 }
 
 .navigation ul li.active a {
-  /* background-color: var(--white-light_extra-dark); */
   background-color: var(--light_extra-dark);
 }
 
@@ -5238,7 +5232,6 @@ body._lock::before {
 }
 
 .btn-filter._active  {
-  /* background: #353C4D; */
   background: var(--gray_dark);
 }
 
@@ -5277,7 +5270,6 @@ body.dark .network-content .search-mobile__filter:hover {
 }
 
 .search-mobile__filter.show {
-  /* background-color: var(--gray_dark); */
   background-color: #01AA89;
 }
 
@@ -5313,12 +5305,9 @@ body.dark .network-content .search-mobile__filter:hover {
 
 /* -- content-main__header-------------------------------------------------------------------------------- */
 
-/* width */
-
 .content-main::-webkit-scrollbar,
 .content-main__wrapper::-webkit-scrollbar,
 .pay__inner::-webkit-scrollbar,
-/* .places-edit__wrapper::-webkit-scrollbar, */
 .popup-cods__labels::-webkit-scrollbar,
 .web-profile__controls::-webkit-scrollbar,
 .statistycs-personal__controls::-webkit-scrollbar,
@@ -5342,7 +5331,6 @@ body.dark .network-content .search-mobile__filter:hover {
 .content-main::-webkit-scrollbar-thumb,
 .content-main__wrapper::-webkit-scrollbar-thumb,
 .pay__inner::-webkit-scrollbar-thumb,
-/* .places-edit__wrapper::-webkit-scrollbar-thumb, */
 .popup-cods__labels::-webkit-scrollbar-thumb,
 .web-profile__controls::-webkit-scrollbar-thumb,
 .statistycs-personal__controls::-webkit-scrollbar-thumb,
@@ -5356,7 +5344,6 @@ body.dark .network-content .search-mobile__filter:hover {
 .content-main::-webkit-scrollbar-thumb,
 .content-main__wrapper::-webkit-scrollbar-thumb,
 .pay__inner::-webkit-scrollbar-thumb,
-/* .places-edit__wrapper::-webkit-scrollbar-thumb, */
 .popup-cods__labels::-webkit-scrollbar-thumb,
 .web-profile__controls::-webkit-scrollbar-thumb,
 .statistycs-personal__controls::-webkit-scrollbar-thumb,
@@ -5377,8 +5364,6 @@ body.dark .ann-edit__wrapper::-webkit-scrollbar-thumb {
 }
 
 .content-main::-webkit-scrollbar-track,
-/* .pay__inner::-webkit-scrollbar-track, */
-/* .places-edit__wrapper::-webkit-scrollbar-track, */
 .priority__inner::-webkit-scrollbar-track {
   background: var(--white_gray);
   padding: 10px;
@@ -5421,7 +5406,6 @@ body.dark .statistycs-personal__controls::-webkit-scrollbar-track {
 .content-main::-webkit-scrollbar-thumb:hover,
 .content-main__wrapper::-webkit-scrollbar-thumb:hover,
 .pay__inner::-webkit-scrollbar-thumb:hover,
-/* .places-edit__wrapper::-webkit-scrollbar-thumb:hover, */
 .popup-cods__labels::-webkit-scrollbar-thumb:hover,
 .web-profile__controls::-webkit-scrollbar-thumb:hover,
 .statistycs-personal__controls::-webkit-scrollbar-thumb:hover,
@@ -5749,8 +5733,6 @@ body.dark {
   --dark_white: #fff;
   --extra-gray_white: #fff;
 }
-
-/* var(--content-bg) */
 
 /* header */
 
@@ -6089,10 +6071,6 @@ body.dark .pay__input--border {
 .content__selects {
   align-items: center;
 }
-
-/* .statistycs-search__filter {
-	background-color: #01AA89;
-} */
 
 .statistycs-search__filter:hover {
   background-color: #009376;
@@ -6612,7 +6590,6 @@ body.dark .body-text {
 
 .announcement .content-main__header {
   height: 100%;
-  /* gap: 24px; */
 }
 
 .announcement .content-main__header-item {
@@ -7136,7 +7113,6 @@ body.dark .places-edit__link {
   background: rgba(0,0,0,0.7);
   opacity: 0;
   pointer-events: none;
-  /* transition: 0.5s all; */
 }
 
 .popup__bg.active {
@@ -7276,7 +7252,6 @@ body.dark .places-edit__link {
   position: absolute;
   top: 0;
   min-width: 100%;
-  /* background-color: #292F3D; */
   left: 0;
   border-top: 0;
   border-radius: 12px;
