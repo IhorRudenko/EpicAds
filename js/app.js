@@ -7,14 +7,10 @@ toggleThemeBox.forEach(function (item) {
       if (document.body.classList.contains('light')) {
          document.body.classList.remove('light')
          document.body.classList.add('dark')
-         // toggleThemeBox.classList.remove('light')
-         // toggleThemeBox.classList.add('dark')
          localStorage.theme = 'dark'
       } else {
          document.body.classList.remove('dark')
          document.body.classList.add('light')
-         // toggleThemeBox.classList.remove('dark')
-         // toggleThemeBox.classList.add('light')
          localStorage.theme = 'light'
       }
    }) 
@@ -23,8 +19,6 @@ toggleThemeBox.forEach(function (item) {
       document.body.classList.add('light')
    } 
 })
-
-
 // // -- /dark-theme -------------------------------------
 
 
@@ -77,6 +71,7 @@ if (isMobile.any()) {
 const asideMenuBurger = document.querySelector('.header-burger');
 const asideBody = document.querySelector('.aside');
 const asideBodyLink = document.querySelector('.aside-item  a');
+const asideSelect = document.querySelector('.aside .select');
 
 if (asideMenuBurger) {
 	asideMenuBurger.addEventListener("click", function (e) {
@@ -85,25 +80,6 @@ if (asideMenuBurger) {
 		asideBody.classList.toggle('_active');
 	});
 }
-
-// Клик снаружи, чтобы закрыть
-// document.addEventListener('click', function (e) {
-//    if (e.target.classList.contains('_active')) {
-//       return;
-//    } 
-//    else if (e.target.closest('.select__title')) {
-//       return;
-//    } 
-//    else if (e.target.closest('.aside-leng__box')) {
-//       return;
-//    } 
-//    else {
-//       asideBody.classList.remove('_active');
-//       document.body.classList.remove('_lock');
-//       asideMenuBurger.classList.remove('_active');
-
-//    }
-// });
 // -- /aside-menu__burger ----------------------------------------------
 
 // -- languages ----------------------------------------------
@@ -319,18 +295,6 @@ function checkedAllInTable(el){
    }
 }
 //  -- /choose all checkbox in a table group -----------------------------------
-
-
-// const networkFilter = document.querySelector('.network-search-mobile__filter');
-// const networkFilterBody = document.querySelector('.network-filters__body');
-
-// if (networkFilter) {
-//    networkFilter.addEventListener('click', function () {
-//       networkFilterBody.classList.toggle('show');
-//    })
-// }
-
-
 
 
 //-- popup-1 ------------------------------------------------------------------------------------------------

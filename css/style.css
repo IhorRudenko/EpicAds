@@ -4985,9 +4985,20 @@ body._lock::before {
   }
 
   .aside._active .select_form__select,
-	.aside._active .form__select {
+	.aside._active .form__select,
+	.aside._active .select__options {
     max-width: 46px;
     transition: all .2s linear;
+  }
+
+  .aside._active .select__option {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    transition: opacity .2s linear;
   }
 
   .aside._active .aside-footer{
@@ -7506,6 +7517,14 @@ body.dark .api__btn svg {
   fill: #fff;
 }
 
+.api__btn:hover {
+  color: #01AA89;
+}
+
+.api__btn:hover svg {
+  stroke: #01AA89;
+}
+
 /* -- priority --------------------------------------------------------------- */
 
 .priority__raw  {
@@ -8059,6 +8078,10 @@ body.dark .chart-img--white {
 
 body.dark .chart-img--dark {
   display: block;
+}
+
+.content {
+  z-index: 0;
 }
 
 .placeholder\:text-\[12px\]::-moz-placeholder{
