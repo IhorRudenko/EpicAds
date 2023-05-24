@@ -193,6 +193,57 @@ function onUserItemClick() {
 }
 // -- /user-menu ----------------------------------------------
 
+// -- notification ----------------------------------------------
+const notifyBtn = document.querySelector('.notification');
+const notifyBox = document.querySelector('.notification-box');
+const notifyClose = document.querySelector('.notification-body__close');
+const notifyBottomClose = document.querySelector('.notification-body__bottom-btn');
+const notifyHeader = document.querySelector('.header');
+
+if (notifyBtn) {
+   notifyBtn.addEventListener('click', function(e) {
+      notifyBox.classList.toggle('notify-open');
+      notifyHeader.classList.toggle('notify-open');
+   });
+   
+   notifyClose.addEventListener('click', function(e) {
+      notifyBox.classList.remove('notify-open');
+      notifyHeader.classList.remove('notify-open');
+   });
+   
+   notifyBottomClose.addEventListener('click', function(e) {
+      notifyBox.classList.remove('notify-open');
+      notifyHeader.classList.remove('notify-open');
+   });
+}
+// -- /notification ----------------------------------------------i
+
+// -- mobile-notification ----------------------------------------------
+const mobileNotifyBtn = document.querySelector('.mobile-notification');
+const mobileNotifyBox = document.querySelector('.mobile-notification-box');
+const mobileNotifyClose = document.querySelector('.mobile-notification-body__close');
+const mobileNotifyBottomClose = document.querySelector('.mobile-notification-body__bottom-btn');
+const mobileNotifyHeader = document.querySelector('.header');
+
+if (mobileNotifyBtn) {
+   mobileNotifyBtn.addEventListener('click', function(e) {
+      mobileNotifyBox.classList.toggle('notify-open');
+      mobileNotifyHeader.classList.toggle('notify-open');
+   });
+   
+   mobileNotifyClose.addEventListener('click', function(e) {
+      mobileNotifyBox.classList.remove('notify-open');
+      mobileNotifyHeader.classList.remove('notify-open');
+   });
+   
+   mobileNotifyBottomClose.addEventListener('click', function(e) {
+      mobileNotifyBox.classList.remove('notify-open');
+      mobileNotifyHeader.classList.remove('notify-open');
+   });
+}
+// -- /mobile-notification ----------------------------------------------i
+
+
 // -- checkbox-body-toggle ----------------------------------------------
 const filterBtn = document.querySelector('.btn-filter');
 const filterBody = document.querySelector('.filter-body');
@@ -209,7 +260,6 @@ if (filterBtn) {
       filterBtn.classList.remove('_active');
    });
 }
-
 // -- /checkbox-body-toggle ----------------------------------------------
 
 //  -- mobile show/hide main filters -----------------------------------
@@ -229,7 +279,6 @@ if(mainFilterBtn) {
 
 //  -- / mobile show/hide main filters-----------------------------------
 
-
 // -- aside-show ----------------------------------------------
 const list = document.querySelectorAll('.aside-item');
 const selectShow = document.querySelector('.dropdown__button');
@@ -246,8 +295,6 @@ if (selectShow) {
       document.querySelector('.aside').classList.remove('_active');
    });
 }
-
-
 // -- /aside-show ----------------------------------------------
 
 //  -- choose only one checkbox in a group -----------------------------------
